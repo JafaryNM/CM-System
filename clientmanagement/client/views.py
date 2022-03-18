@@ -158,3 +158,14 @@ class AllProjects(ListView):
         context = super(AllProjects, self).get_context_data(**kwargs)
         context['projects']=Project.objects.all()
         return context
+    
+############# PAYEMENTS URLS ################
+
+class DisplayPayments(ListView):
+    model=Payment
+    template_name='payments/payments.html'
+    
+    def get_context_data(self, **kwargs):
+        context = super(DisplayPayments, self).get_context_data(**kwargs)
+        context['payments']=Payment.objects.all()
+        return context

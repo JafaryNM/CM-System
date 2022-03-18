@@ -28,6 +28,7 @@
                                 <th>Date Ended</th>
                                 <th>Expire Date</th>
                                 <th>Price</th>
+                                <th>Paid Status</th>
                                 <th>Action</th>
 
                             </tr>
@@ -47,7 +48,8 @@
                                 <td>{{project.date_expired}}</td>
                                 <td>{{project.Price}}TSH</td>
 
-                                <td>
+                                <td>{{project.paid_status}}</td>
+                               <td> 
                                     
                                     <a href="{% url 'projectupdate' project.id %}" ><i class="fas fa-edit"></i></a>
                                     <a href= "{% url 'projectdelete' project.id %} " ><i class="fas fa-trash-alt"></i></a>

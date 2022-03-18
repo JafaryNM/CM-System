@@ -27,12 +27,15 @@ urlpatterns = [
    
    ########### PROJECTCRUD URLS ###################
 
-    path ('',DisplayProjects.as_view(), name='projects' ),
+    #path ('',DisplayProjects.as_view(), name='projects' ),
     path ('project/create',CreateProjects.as_view(), name='createproject'),
     path ('project/<int:pk>/update', UpdateProject.as_view(), name='projectupdate'),
     path('project/<int:pk>/delete',DeleteProject.as_view(), name='projectdelete'),
-    path('projectall/',AllProjects.as_view(), name='project_all')
+    path('projectall/',AllProjects.as_view(), name='project_all'),
    
+   
+   ########### PAYMENT CRUD #####################
+   path('',DisplayPayments.as_view(), name='payments')
    
    
     

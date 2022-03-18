@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+{{service}}
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Edit {{service.name}}</h4>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <form action="" method="Post" class="forms-sample">
+                        {%csrf_token%}
+            
+                        <div class="form-group">
+                          {{ form|crispy }}
+                        </div>
+                         <button type="submit" class="btn btn-success m-2">Submit</button>
+                          <a href="{% url 'services' %}" class="btn btn-secondary"> Cancel</a> 
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+{% endblock  %}
